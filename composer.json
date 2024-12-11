@@ -1,5 +1,5 @@
 {
-  "name": "xpat23/http",
+  "name": "xpat/xpat-http",
   "description": "Http requests library.",
   "type": "library",
   "license": "MIT",

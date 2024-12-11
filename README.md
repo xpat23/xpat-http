@@ -21,6 +21,11 @@ composer require xpat/xpat-http
 ### GET Request Example
 
 ```php
+use Xpat\Http\Request\Get;
+use Xpat\Http\Request\Headers;
+use Xpat\Http\Request\Url;
+
+
 $response = (
     new Get(
         new Url(
@@ -42,6 +47,13 @@ echo $response->statusCode() . PHP_EOL;
 ### POST Request Example
 
 ```php
+
+use Xpat\Http\Request\Headers;
+use Xpat\Http\Request\JsonBody;
+use Xpat\Http\Request\Post;
+use Xpat\Http\Request\Url;
+
+
 $response = (
     new Post(
         new Url(
@@ -66,6 +78,12 @@ echo $response->statusCode() . PHP_EOL;
 ### PUT Request Example
 
 ```php
+use Xpat\Http\Request\Headers;
+use Xpat\Http\Request\JsonBody;
+use Xpat\Http\Request\Put;
+use Xpat\Http\Request\Url;
+
+
 $response = (
     new Put(
         new Url(
@@ -91,6 +109,11 @@ echo $response->statusCode() . PHP_EOL;
 ### DELETE Request Example
 
 ```php
+use Xpat\Http\Request\Delete;
+use Xpat\Http\Request\Headers;
+use Xpat\Http\Request\Url;
+
+
 $response = (
     new Delete(
         new Url(
