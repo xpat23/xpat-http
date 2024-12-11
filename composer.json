@@ -1,0 +1,27 @@
+{
+  "name": "xpat23/http",
+  "description": "Http requests library.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alymbek Kydyrmyshev",
+      "email": "x.pat.kg@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.3",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Xpat\\Http\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
