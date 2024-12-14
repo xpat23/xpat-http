@@ -9,4 +9,6 @@ use Xpat\Http\Response\HttpResponse;
 interface HttpRequest
 {
     public function execute(): HttpResponse;
+
+    public function url(): string;
 }

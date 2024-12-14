@@ -34,4 +34,9 @@ final readonly class Delete implements HttpRequest
 
         return new Response($statusCode, $result);
     }
+
+    public function url(): string
+    {
+        return $this->url->value();
+    }
 }

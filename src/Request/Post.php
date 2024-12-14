@@ -36,4 +36,9 @@ readonly class Post implements HttpRequest
 
         return new Response($statusCode, $result);
     }
+
+    public function url(): string
+    {
+        return $this->url->value();
+    }
 }
