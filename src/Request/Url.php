@@ -17,4 +17,18 @@ readonly class Url implements HttpUrl
     {
         return $this->host . ':' . $this->port . $this->path;
     }
+
+    public function host(): string
+    {
+        return $this->host;
+    }
+
+    public function domain(): string
+    {
+        return str_replace(
+            ['http://', 'https://', 'www.'],
+            '',
+            $this->host
+        );
+    }
 }

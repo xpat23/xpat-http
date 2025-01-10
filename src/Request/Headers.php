@@ -20,6 +20,11 @@ readonly class Headers implements HttpHeaders
 
     public function items(): array
     {
-        return $this->items;
+        $items = [];
+        foreach ($this->items as $name => $value) {
+            $items[] = sprintf('%s: %s', $name, $value);
+        }
+
+        return $items;
     }
 }

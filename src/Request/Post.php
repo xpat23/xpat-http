@@ -23,7 +23,11 @@ readonly class Post implements HttpRequest
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $this->body->content());
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $this->headers->items());
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Host: ' . $this->url->domain(),
+            'User-Agent: Xpat-Http/1.6',
+            ...$this->headers->items(),
+        ]);
 
         $result = curl_exec($ch);
         $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
